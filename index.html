@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>🌴・𝓟𝓕𝓟 𝓟𝓪𝓻𝓪𝓭𝓲𝓼𝓮・✨</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #3d0610 0%, #160208 45%, #090106 100%);
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 0, 5, 0.75);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff536f;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .logo {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow:
+        0 0 25px rgba(255, 30, 70, 0.35),
+        0 0 70px rgba(255, 30, 70, 0.15);
+      margin-bottom: 35px;
+    }
+
+    .hero h1 {
+      font-size: clamp(35px, 7vw, 75px);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #c8c8c8;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    /* BUTTON */
+
+    .discord-btn {
+      display: inline-block;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #5865f2, #7289da);
+      color: white;
+      text-decoration: none;
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 17px;
+      box-shadow: 0 10px 30px rgba(88,101,242,0.3);
+      transition: 0.3s;
+    }
+
+    .discord-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 15px 40px rgba(88,101,242,0.5);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 50px;
+    }
+
+    /* CARDS */
+
+    .cards {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,80,110,0.4);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .card-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    /* RULES */
+
+    .rules {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .rule {
+      display: flex;
+      gap: 18px;
+      padding: 22px;
+      margin-bottom: 12px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .rule:hover {
+      background: rgba(255,255,255,0.07);
+      transform: translateX(5px);
+    }
+
+    .rule-icon {
+      font-size: 25px;
+      min-width: 35px;
+    }
+
+    .rule h3 {
+      margin-bottom: 5px;
+    }
+
+    .rule p {
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    /* DISCORD */
+
+    .discord-section {
+      text-align: center;
+    }
+
+    .discord-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 60px 30px;
+      border-radius: 25px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(88,101,242,0.18),
+          rgba(255,50,80,0.08)
+        );
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .discord-box h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .discord-box p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    footer strong {
+      color: #ddd;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      .nav-logo {
+        font-size: 15px;
+      }
+
+      nav .links {
+        display: none;
+      }
+
+      .logo {
+        width: 180px;
+        height: 180px;
+      }
+
+      section {
+        padding: 75px 5%;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="nav-logo">
+      🌴 PFP Paradise ✨
+    </div>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">Über uns</a>
+      <a href="#rules">Regelwerk</a>
+      <a href="#discord">Discord</a>
+    </div>
+  </nav>
+
+
+  <!-- STARTSEITE -->
+
+  <section class="hero" id="home">
+
+    <!--
+      HIER DEIN LOGO EINTRAGEN
+
+      Ersetze "DEIN-LOGO-LINK" durch einen direkten Bild-Link
+    -->
+
+    <img
+      class="logo"
+      src="https://media.discordapp.net/attachments/1543284321048334346/1546493944471486595/pfp_paradies.jpg?ex=6a9ffc38&is=6a9eaab8&hm=8c4be45b495ae5081e77c7b82dc6c9559aa0dc5a1442ab40e6fc90cc94fb7ede&=&format=webp"
+      alt="PFP Paradise Logo"
+    >
+
+    <h1>
+      🌴・𝓟𝓕𝓟 𝓟𝓪𝓻𝓪𝓭𝓲𝓼𝓮・✨
+    </h1>
+
+    <p>
+      Willkommen im PFP Paradise!
+      Eine Community zum Austauschen, Spaß haben,
+      neue Leute kennenlernen und gemeinsam eine gute Zeit verbringen.
+    </p>
+
+    <a
+      class="discord-btn"
+      href="https://discord.gg/5Nxwkw7sQ6"
+      target="_blank"
+    >
+      💬 Unseren Discord joinen
+    </a>
+
+  </section>
+
+
+  <!-- ÜBER UNS -->
+
+  <section id="about">
+
+    <h2 class="section-title">
+      🌺 Was dich erwartet
+    </h2>
+
+    <p class="section-subtitle">
+      Willkommen im Paradise – hier ist für jeden etwas dabei.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h3>Community</h3>
+        <p>
+          Tausche dich mit anderen Mitgliedern aus
+          und lerne neue Leute kennen.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>PFPs</h3>
+        <p>
+          Entdecke verschiedene Profilbilder,
+          Designs und kreative Inhalte.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎉</div>
+        <h3>Events</h3>
+        <p>
+          Nimm an Community-Aktionen und
+          Events teil.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌴</div>
+        <h3>Paradise</h3>
+        <p>
+          Entspann dich, hab Spaß und
+          genieße unsere Community.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REGELWERK -->
+
+  <section id="rules">
+
+    <h2 class="section-title">
+      📜・𝓡𝓮𝓰𝓮𝓵𝔀𝓮𝓻𝓴
+    </h2>
+
+    <p class="section-subtitle">
+      Damit unser Paradise für alle angenehm bleibt.
+    </p>
+
+    <div class="rules">
+
+      <div class="rule">
+        <div class="rule-icon">🚫</div>
+        <div>
+          <h3>Kein Spam</h3>
+          <p>
+            Bitte vermeide unnötige Nachrichten,
+            Pings oder wiederholte Inhalte.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">🔞</div>
+        <div>
+          <h3>Kein NSFW</h3>
+          <p>
+            NSFW- oder anderweitig unangemessene
+            Inhalte sind nicht erlaubt.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">🔐</div>
+        <div>
+          <h3>Kein Leaking</h3>
+          <p>
+            Private Inhalte, Nachrichten oder
+            Informationen anderer dürfen nicht
+            weitergegeben werden.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">🚨</div>
+        <div>
+          <h3>Kein Doxxing</h3>
+          <p>
+            Das Veröffentlichen persönlicher Daten
+            anderer ist strengstens verboten.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">🫶</div>
+        <div>
+          <h3>Kein Mobbing</h3>
+          <p>
+            Behandle alle Mitglieder respektvoll.
+            Beleidigungen, Ausgrenzung und Mobbing
+            werden nicht toleriert.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">📢</div>
+        <div>
+          <h3>Keine Eigenwerbung</h3>
+          <p>
+            Werbung für eigene Server,
+            Social-Media-Accounts oder andere
+            Projekte ist ohne Erlaubnis nicht gestattet.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">🛑</div>
+        <div>
+          <h3>Keine Belästigung</h3>
+          <p>
+            Respektiere die Grenzen anderer
+            und belästige niemanden.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">⚖️</div>
+        <div>
+          <h3>Discord-Regeln</h3>
+          <p>
+            Zusätzlich gelten die offiziellen
+            Discord-Nutzungsbedingungen.
+          </p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="rule-icon">🌺</div>
+        <div>
+          <h3>Respektvoll bleiben</h3>
+          <p>
+            Respektvoll bleiben • Spaß haben •
+            Paradise genießen!
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DISCORD -->
+
+  <section class="discord-section" id="discord">
+
+    <div class="discord-box">
+
+      <h2>💜 Komm ins Paradise!</h2>
+
+      <p>
+        Du möchtest Teil unserer Community werden?
+        Dann schau auf unserem Discord vorbei!
+      </p>
+
+      <a
+        class="discord-btn"
+        href="https://discord.gg/5Nxwkw7sQ6"
+        target="_blank"
+      >
+        🌴 Discord beitreten
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      🌴 <strong>𝓟𝓕𝓟 𝓟𝓪𝓻𝓪𝓭𝓲𝓼𝓮</strong> ✨
+    </p>
+
+    <p style="margin-top: 10px;">
+      © 2026 PFP Paradise • Respektvoll bleiben & Spaß haben!
+    </p>
+
+  </footer>
+
+
+</body>
+</html>
